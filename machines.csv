@@ -1,0 +1,11 @@
+gateway|Labo3|10240|2048|16|debian10.iso|1:bridged:eno1:080027196666|2:intnet:lan:080CC7DC459A|3:intnet:dmz:080026695931|4:none:none:none
+dns|Labo3|10240|2048|16|CentOS-KS.iso|1:intnet:dmz:080027A4D786|2:none:none:none|3:none:none:none|4:none:none:none
+proxidmz1|Labo3|10240|2048|16|CentOS-KS.iso|1:intnet:dmz:080027E48B3B|2:none:none:none|3:none:none:none|4:none:none:none
+proxidmz2|Labo3|10240|2048|16|CentOS-KS.iso|1:intnet:dmz:08002784C041|2:none:none:none|3:none:none:none|4:none:none:none
+webdmz1|Labo3|10240|2048|16|CentOS-KS.iso|1:intnet:dmz:080027BC6221|2:none:none:none|3:none:none:none|4:none:none:none
+webdmz2|Labo3|10240|2048|16|CentOS-KS.iso|1:intnet:dmz:0800275C6EFA|2:none:none:none|3:none:none:none|4:none:none:none
+proxilan1|Labo3|10240|2048|16|CentOS-KS.iso|1:intnet:lan:080027E801DB|2:none:none:none|3:none:none:none|4:none:none:none
+proxilan2|Labo3|10240|2048|16|CentOS-KS.iso|1:intnet:lan:080027A29400|2:none:none:none|3:none:none:none|4:none:none:none
+weblan1|Labo3|10240|2048|16|CentOS-KS.iso|1:intnet:lan:080027E3058A|2:none:none:none|3:none:none:none|4:none:none:none
+weblan2|Labo3|10240|2048|16|CentOS-KS.iso|1:intnet:lan:0800274F3DB7|2:none:none:none|3:none:none:none|4:none:none:none
+wkslinux|Labo3|10240|2048|16|linuxmint20.iso|1:intnet:lan:080027E3058A|2:none:none:none|3:none:none:none|4:none:none:none
