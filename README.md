@@ -1,4 +1,16 @@
 # Labo3
+## Ajouter les fichier ISO dans le dossier ISOs a la racine du répértoire.
+
+Renommer les fichier isos : 
+> linuxmint20.iso
+> debian10.iso
+
+
+> git clone https://github.com/badouuuuuu/Labo3.git
+> cd Labo3
+> chmod +x createVM.sh
+> ./createVM.sh
+
 # Création Kickstart CentOs7
 
 Récupération de l'ISO CentOs 7 : https://mirror.unix-solutions.be/centos/7.9.2009/isos/x86_64/
@@ -47,9 +59,9 @@ Récupération de l'ISO CentOs 7 : https://mirror.unix-solutions.be/centos/7.9.2
 
 8. Créer le fichier /root/CentOS-autoinstall.iso à partir du répertoire de travail
 
-> mkisofs -J -T -o /home/tux/CentOS-autoinstall.iso -b isolinux/isolinux.bin -c isolinux/boot.cat -no-emul-boot -boot-load-size 4 -boot-info-table -R -m TRANS.TBL -graft-points -V "CentOS 7 x86_64" /root/centos-autoinstall/
+> mkisofs -J -T -o ./ISOs/CentOS-autoinstall.iso -b isolinux/isolinux.bin -c isolinux/boot.cat -no-emul-boot -boot-load-size 4 -boot-info-table -R -m TRANS.TBL -graft-points -V "CentOS 7 x86_64" /root/centos-autoinstall/
 
 9. Récuperer l'image via scp 
-> scp user@ip_de_la_machine:/home/tux/CentOs-autoinstall.iso "chemin local"
+> scp user@ip_de_la_machine:./ISOs/CentOs-autoinstall.iso "chemin local"
 
 10. Créer une VM via Virtualbox afin de tester l'iso créer CentOs-autoinstall.iso et selectionner l'entrée "Kickstarter Auto install" lors du menu de boot
