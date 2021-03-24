@@ -4,8 +4,8 @@
 logFile="createvm.log"
 configFile="machines.csv"
 formatedDate=$(date +%d-%m-%Y_%H:%M)
-vmFilePath="/home/tux/VirtualBox VMs"
-isoFilePath="/home/tux/Desktop/Labo3-Automatisation/ISOs"
+vmFilePath="VMs_Created"
+isoFilePath="ISOs"
 
 # function
 function splitline
