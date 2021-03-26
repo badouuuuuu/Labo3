@@ -1,5 +1,6 @@
 #!/bin/bash
 ### Initialisation
+cd "$(dirname "$0")"
 
 logFile="createvm.log"
 configFile="machines.csv"
@@ -58,16 +59,10 @@ function createVm
   VBoxManage storageattach $vmName --storagectl SATA --port 0 --device 0 --type hdd --medium "$vmFilePath/$vmGroup/$vmName/$vmName.vmdk"
   VBoxManage storagectl $vmName --name IDE --add IDE
   VBoxManage storageattach $vmName --storagectl IDE --port 0 --device 0 --type dvddrive --medium "$isoFilePath/$vmIso"
-  VBoxManage modifyvm $vmName --memory $vmRam --vram $vmVram
-  VBoxManage modifyvm $vmName --graphicscontroller vmsvga
-  VBoxManage modifyvm $vmName --ioapic on
-  VBoxManage modifyvm $vmName --boot1 dvd --boot2 disk --boot3 none --boot4 none
-  VBoxManage modifyvm $vmName --cpus 1
-  VBoxManage modifyvm $vmName --audio none
-  VBoxManage modifyvm $vmName --usb off
-  VBoxManage modifyvm $vmName --usbehci off
-  VBoxManage modifyvm $vmName --usbxhci off
-  VBoxManage modifyvm $vmName --nic1 ${netInterface[1]} --nic2 ${netInterface[2]}  --nic3 ${netInterface[3]} --nic4 ${netInterface[4]}
+  VBoxManage modifyvm $vmName --memory $vmRam --vram $vmVram --graphicscontroller vmsvga \  --ioapic on \  --boot1 dvd --boot2 disk \  --boot3 none \ --boot4 none --cpus 1 \  --audio none --usbxhci off \ --nic1 ${netInterface[1]} --nic2 ${netInterface[2]}  --nic3 ${netInterface[3]} --nic4 ${netInterface[4]} --usbehci off
+
+  
+
   message="$formatedDate - Vm $vmName has been created in $vmGroup group in folder $vmFilePath, it's $vmType type"
   #VBoxManage startvm $vmName --type gui
   echo "debug : VBoxManage modifyvm $vmName --nic1 ${netInterface[1]} --nic2 ${netInterface[2]}  --nic3 ${netInterface[3]} --nic4 ${netInterface[4]}"
