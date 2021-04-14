@@ -1,4 +1,4 @@
-# Labo3
+# Création iso kickstart d'auto-installation Centos 7 avec anaconda - Technifutur Labo3
 ### Ajouter les fichier ISO dans le dossier ISOs a la racine du répértoire.
 
 Renommer les fichier isos : 
