@@ -6,8 +6,8 @@ Renommer les fichier isos :
 - debian10.iso
 
 ```sh
-git clone https://github.com/badouuuuuu/Labo3.git
-cd Labo3
+git clone https://github.com/badouuuuuu/centos-kickstart-labo3.git
+cd centos-kickstart-labo3
 chmod +x createVM.sh
 ./createVM.sh
 ```
