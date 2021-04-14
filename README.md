@@ -1,14 +1,17 @@
 # Création iso kickstart d'auto-installation Centos 7 avec anaconda   Technifutur Labo3
 ### Ajouter les fichier ISO dans le dossier ISOs a la racine du répértoire.
 
-Si vous le faite manuellement renommer les fichier isos : 
-- linuxmint20.iso
-- debian10.iso
+
 
 ```sh
 git clone https://github.com/badouuuuuu/centos-kickstart-labo3.git
 cd centos-kickstart-labo3
 ```
+
+## Ajout des Isos
+Si vous le faite manuellement renommer les fichier isos : 
+- linuxmint20.iso
+- debian10.iso
 
 ```sh
 wget https://cdimage.debian.org/debian-cd/current/amd64/iso-cd/debian-10.9.0-amd64-netinst.iso -O debian10.iso -P ./ISOs
