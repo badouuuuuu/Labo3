@@ -1,27 +1,8 @@
 # Création iso kickstart d'auto-installation Centos 7 avec anaconda   Technifutur Labo3
-### Ajouter les fichier ISO dans le dossier ISOs a la racine du répértoire.
-
-
 
 ```sh
 git clone https://github.com/badouuuuuu/centos-kickstart-labo3.git
 cd centos-kickstart-labo3
-```
-
-## Ajout des Isos
-Si vous le faite manuellement renommer les fichier isos : 
-- linuxmint20.iso
-- debian10.iso
-
-```sh
-wget https://cdimage.debian.org/debian-cd/current/amd64/iso-cd/debian-10.9.0-amd64-netinst.iso -O debian10.iso -P ./ISOs
-wget https://mirror.dogecloud.org/Linux/Mint/stable/20/linuxmint-20-mate-64bit.iso -O linuxmint20.iso -P ./ISOs
-```
-Avant d'excutez createVM.sh ci dessous, passez a l'étape Création kickstart CentOs 7
-
-```sh
-chmod +x createVM.sh
-./createVM.sh
 ```
 
 ## Création Kickstart CentOs 7
@@ -106,3 +87,21 @@ scp user@ip_de_la_machine:./ISOs/CentOs-autoinstall.iso "chemin local"
 ```
 
 ### 10. Créer une VM via Virtualbox afin de tester l'iso créer CentOs-autoinstall.iso et selectionner l'entrée "Kickstarter Auto install" lors du menu de boot
+
+### Ajouter les fichier ISO dans le dossier ISOs a la racine du répértoire.
+
+## Ajout des Isos
+Si vous le faite manuellement renommer les fichier isos : 
+- linuxmint20.iso
+- debian10.iso
+
+```sh
+wget https://cdimage.debian.org/debian-cd/current/amd64/iso-cd/debian-10.9.0-amd64-netinst.iso -O debian10.iso -P ./ISOs
+wget https://mirror.dogecloud.org/Linux/Mint/stable/20/linuxmint-20-mate-64bit.iso -O linuxmint20.iso -P ./ISOs
+```
+Avant d'excutez createVM.sh ci dessous, passez a l'étape Création kickstart CentOs 7
+
+```sh
+chmod +x createVM.sh
+./createVM.sh
+```
